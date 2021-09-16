@@ -4,11 +4,49 @@
   padding: 0;
 }
 
+.container__resume, .container__techstack, .container__projects, .container__about, body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   background-color: #0e0b24;
-  display: flex;
-  justify-content: center;
   height: 100vh;
   width: 100vw;
+}
+
+.container__resume, .container__techstack, .container__projects, .container__about {
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  opacity: 0.8;
+  font-weight: bolder;
+  letter-spacing: 0.05rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.container__resume:hover, .container__techstack:hover, .container__projects:hover, .container__about:hover {
+  transition: all 1s ease;
+  color: #5a9cd1;
+}
+
+.container {
+  color: #6df3d6;
+  display: grid;
+  gap: 1rem;
+  grid-template-areas: "about projects" "stack resume";
+}
+.container__about {
+  grid-area: about;
+}
+.container__projects {
+  grid-area: projects;
+}
+.container__techstack {
+  grid-area: stack;
+}
+.container__resume {
+  grid-area: resume;
 }
