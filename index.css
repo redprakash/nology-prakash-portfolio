@@ -4,7 +4,7 @@
   padding: 0;
 }
 
-.container__resume, .container__techstack, .container__projects, .container__about, body {
+.container__resume, .container__techstack, .container__projects, .container__about {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,28 +13,53 @@
 body {
   font-family: "Roboto", sans-serif;
   background-color: #0e0b24;
+  display: flex;
+  justify-content: center;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
-  width: 100vw;
+  justify-content: space-evenly;
+}
+
+.intro__name {
+  font-size: 3.8rem;
+  letter-spacing: 0.05rem;
+  color: #a9c8c9;
+}
+.intro__desc {
+  margin-top: 1rem;
+  letter-spacing: 0.2rem;
+  border-top: 1px solid coral;
+  border-bottom: 1px solid #90cbda;
+  line-height: 3rem;
 }
 
 .container__resume, .container__techstack, .container__projects, .container__about {
   width: 200px;
   height: 200px;
-  background-color: black;
-  opacity: 0.8;
+  background-color: #050505;
   font-weight: bolder;
   letter-spacing: 0.05rem;
   font-size: 1.6rem;
+  border-radius: 1rem;
   cursor: pointer;
 }
 .container__resume:hover, .container__techstack:hover, .container__projects:hover, .container__about:hover {
   transition: all 1s ease-in;
-  color: #5a9cd1;
-  background-color: #1e1a3d;
+  color: #a2bcd1;
+  background-color: #1e6091;
+}
+
+.intro {
+  color: white;
+  letter-spacing: 0.05rem;
 }
 
 .container {
-  color: #6df3d6;
+  color: #a9c8c9;
   display: grid;
   gap: 1rem;
   grid-template-areas: "about projects" "stack resume";
