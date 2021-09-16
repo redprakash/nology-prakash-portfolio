@@ -28,8 +28,9 @@ body {
   cursor: pointer;
 }
 .container__resume:hover, .container__techstack:hover, .container__projects:hover, .container__about:hover {
-  transition: all 1s ease;
+  transition: all 1s ease-in;
   color: #5a9cd1;
+  background-color: #1e1a3d;
 }
 
 .container {
