@@ -4,17 +4,26 @@
   padding: 0;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
 .container__resume, .container__techstack, .container__projects, .container__about {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-body {
-  font-family: "Roboto", sans-serif;
-  background-color: #0e0b24;
-  display: flex;
-  justify-content: center;
+.nology-link a {
+  text-decoration: none;
+  color: white;
+}
+.nology-link a:hover {
+  color: #a9c8c9;
 }
 
 .main-wrapper {
@@ -23,7 +32,19 @@ body {
   height: 100vh;
   justify-content: space-evenly;
 }
+@media screen and (max-width: 576px) {
+  .main-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    padding: 1rem;
+  }
+}
 
+.intro {
+  display: flex;
+  flex-direction: column;
+}
 .intro__name {
   font-size: 3.8rem;
   letter-spacing: 0.05rem;
@@ -40,7 +61,7 @@ body {
 .container__resume, .container__techstack, .container__projects, .container__about {
   width: 200px;
   height: 200px;
-  background-color: #050505;
+  background-color: #272626;
   font-weight: bolder;
   letter-spacing: 0.05rem;
   font-size: 1.6rem;
@@ -75,4 +96,25 @@ body {
 }
 .container__resume {
   grid-area: resume;
+}
+@media screen and (max-width: 576px) {
+  .container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .container__about {
+    width: 100%;
+  }
+  .container__projects {
+    width: 100%;
+  }
+  .container__techstack {
+    width: 100%;
+  }
+  .container__resume {
+    width: 100%;
+  }
 }
