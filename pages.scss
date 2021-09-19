@@ -1,0 +1,59 @@
+@use './modules/bodyreset.scss';
+@use './partials/colors';
+@use './partials/variables';
+.wrapper {
+  display: flex;
+  color: rgb(196, 191, 191);
+  width: 95vw;
+  height: 100vh;
+
+  &__left {
+    min-width: 18rem;
+    border-right: 1px solid rgb(144, 203, 218);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__name {
+      font-size: 3.5rem;
+      letter-spacing: variables.$letter-spacing;
+      color: colors.$primary-color;
+    }
+    &__menu {
+      margin-top: 2rem;
+      ul {
+        list-style: none;
+        li {
+          line-height: 2rem;
+          a {
+            color: white;
+            text-decoration: none;
+            letter-spacing: variables.$letter-spacing;
+            &:hover {
+              color: colors.$primary-color;
+              transition: all 0.5s ease;
+            }
+            &:active {
+              color: colors.$primary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  &__right {
+    width: 80vw;
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &__pagetitle {
+      font-size: 2rem;
+      letter-spacing: variables.$letter-spacing;
+    }
+    &__pagecontent {
+      margin-top: 2rem;
+      letter-spacing: variables.$letter-spacing;
+    }
+  }
+}
