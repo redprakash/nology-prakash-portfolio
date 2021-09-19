@@ -12,6 +12,11 @@ body {
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: #a9c8c9;
+}
+
 .container__resume, .container__techstack, .container__projects, .container__about {
   display: flex;
   justify-content: center;
